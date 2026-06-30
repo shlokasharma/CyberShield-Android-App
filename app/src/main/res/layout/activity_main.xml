@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F0F7">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Top Hamburger Icon -->
+        <ImageButton
+            android:id="@+id/menuButton"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/circle_beige"
+            android:src="@drawable/ic_menu"
+            android:padding="14dp"
+            android:layout_marginTop="10dp"/>
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Event Details"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#2D2020"
+            android:gravity="center"
+            android:layout_marginTop="20dp"/>
+
+        <!-- Date + Time Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:gravity="center_vertical">
+
+            <!-- Date Section -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#2D2020"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="8dp">
+
+                    <ImageView
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:background="@drawable/circle_beige"
+                        android:src="@drawable/ic_calendar"
+                        android:padding="10dp"/>
+
+                    <TextView
+                        android:id="@+id/dateText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="03 Mar 2026"
+                        android:textSize="16sp"
+                        android:textColor="#2D2020"
+                        android:layout_marginStart="10dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Time Section -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#2D2020"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="8dp">
+
+                    <ImageView
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:background="@drawable/circle_pink"
+                        android:src="@drawable/ic_alarm"
+                        android:padding="10dp"/>
+
+                    <TextView
+                        android:id="@+id/timeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00:00:00 am"
+                        android:textSize="16sp"
+                        android:textColor="#2D2020"
+                        android:layout_marginStart="10dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Risk Level Text -->
+        <TextView
+            android:id="@+id/riskScoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rule: LOW | ML: Low"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#2D2020"
+            android:layout_marginTop="30dp"/>
+
+        <!-- 4 Cards Grid -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="24dp">
+
+            <!-- Row 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <!-- SMS Checked Card -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="160dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_red"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:layout_margin="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📩 SMS Checked"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#2D2020"/>
+
+                    <TextView
+                        android:id="@+id/smsCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="42sp"
+                        android:textColor="#CC8888"
+                        android:layout_marginTop="16dp"/>
+                </LinearLayout>
+
+                <!-- Quiz Score Card -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="160dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_purple"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:layout_margin="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🧠 Quiz Score"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#2D2020"/>
+
+                    <TextView
+                        android:id="@+id/quizScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0%"
+                        android:textSize="42sp"
+                        android:textColor="#9999CC"
+                        android:layout_marginTop="16dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Row 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <!-- URLs Scanned Card -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="160dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_green"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:layout_margin="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🔗 URLs Scanned"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#2D2020"/>
+
+                    <TextView
+                        android:id="@+id/urlCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="42sp"
+                        android:textColor="#88CCBB"
+                        android:layout_marginTop="16dp"/>
+                </LinearLayout>
+
+                <!-- Manipulation Signals Card -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="160dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_orange"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:layout_margin="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⚠️ Manipulation Signals"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#2D2020"/>
+
+                    <TextView
+                        android:id="@+id/manipulationCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="42sp"
+                        android:textColor="#CCAA88"
+                        android:layout_marginTop="16dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

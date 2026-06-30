@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F3F0F7"
+    android:padding="20dp">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🧠 Scam Quiz"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#2D2020"
+        android:gravity="center"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Progress -->
+    <TextView
+        android:id="@+id/progressText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Question 1"
+        android:textSize="14sp"
+        android:textColor="#888888"
+        android:gravity="center"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Score -->
+    <TextView
+        android:id="@+id/scoreText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Score: 0"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#2D2020"
+        android:gravity="center"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Question Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/card_purple"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center"
+        android:layout_marginTop="24dp">
+
+        <TextView
+            android:id="@+id/questionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Loading question..."
+            android:textSize="18sp"
+            android:textColor="#2D2020"
+            android:gravity="center"
+            android:lineSpacingExtra="6dp"/>
+
+    </LinearLayout>
+
+    <!-- XAI Explanation Box -->
+    <LinearLayout
+        android:id="@+id/xaiBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_orange"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🤖 AI Explanation"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#2D2020"/>
+
+        <TextView
+            android:id="@+id/xaiText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="13sp"
+            android:textColor="#2D2020"
+            android:layout_marginTop="6dp"
+            android:lineSpacingExtra="4dp"/>
+
+    </LinearLayout>
+
+    <!-- Answer Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnScam"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="🚨 SCAM"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#F4A0A0"
+            android:textColor="#2D2020"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnLegit"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="✅ LEGIT"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#A8E0D0"
+            android:textColor="#2D2020"
+            android:layout_marginStart="8dp"/>
+
+    </LinearLayout>
+
+    <!-- Next Button -->
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Next Question ➡️"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:backgroundTint="#B8B8E8"
+        android:textColor="#2D2020"
+        android:layout_marginTop="12dp"
+        android:visibility="gone"/>
+
+    <!-- Finish Button -->
+    <Button
+        android:id="@+id/btnFinish"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="See My Results 🏆"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:backgroundTint="#F4A0A0"
+        android:textColor="#2D2020"
+        android:layout_marginTop="12dp"
+        android:visibility="gone"/>
+
+</LinearLayout>

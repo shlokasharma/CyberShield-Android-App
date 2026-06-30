@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F3F0F7">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/menuButton"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/circle_beige"
+            android:src="@drawable/ic_menu"
+            android:padding="14dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ScamGuard"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#2D2020"
+            android:gravity="center"/>
+
+        <!-- Placeholder for symmetry -->
+        <View
+            android:layout_width="56dp"
+            android:layout_height="56dp"/>
+
+    </LinearLayout>
+
+    <!-- Nav Cards -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Home Card -->
+            <LinearLayout
+                android:id="@+id/navHome"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/card_purple"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="20dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🏠"
+                    android:textSize="28sp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dashboard"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#2D2020"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View your risk overview"
+                        android:textSize="13sp"
+                        android:textColor="#666666"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- URL Checker Card -->
+            <LinearLayout
+                android:id="@+id/navUrlChecker"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/card_green"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="20dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🔗"
+                    android:textSize="28sp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="URL Checker"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#2D2020"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Scan any URL or message"
+                        android:textSize="13sp"
+                        android:textColor="#666666"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Quiz Card -->
+            <LinearLayout
+                android:id="@+id/navQuiz"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/card_orange"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="20dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🧠"
+                    android:textSize="28sp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Scam Quiz"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#2D2020"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Test your scam awareness"
+                        android:textSize="13sp"
+                        android:textColor="#666666"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- SMS Log Card -->
+            <LinearLayout
+                android:id="@+id/navSmsLog"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/card_red"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="20dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📩"
+                    android:textSize="28sp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SMS Threat Log"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#2D2020"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View all detected scam SMS"
+                        android:textSize="13sp"
+                        android:textColor="#666666"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
